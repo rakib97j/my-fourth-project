@@ -40,7 +40,7 @@
           Job Application Tracker
         </h1>
       </div>
-      <div class="grid grid-cols-3 gap-4 mb-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
         <!-- Total Interview card -->
         <div class="border-[#F1F2F4] border rounded-xl bg-[#FFFFFF] p-5">
           <h1 class="mb-2 text-[#323B49] text-xl font-medium">Total</h1>
@@ -61,12 +61,66 @@
       </div>
     </header>
 
-
-
-
-
+    <!-- jobs card section-->
     <main>
-        
+      <section>
+        <!-- Available Jobs section -->
+        <div class="flex justify-between my-8">
+          <h1 class="text-[#002C5C] text-xl font-bold">Available Jobs</h1>
+          <p class="text-[#323B49] font-medium text-base">
+            <span>0</span> jobs
+          </p>
+        </div>
+        <!-- Buttons -->
+        <div class="flex gap-2 pb-4">
+          <button
+            class="px-3 rounded-lg text-white font-medium text-xs bg-[#3B82F6] py-2.5 w-20 border-[#F1F2F4] border"
+          >
+            All
+          </button>
+          <button
+            class="px-3 rounded-lg text-[#64748B] font-medium text-xs bg-white py-2.5 border-[#F1F2F4] border"
+          >
+            Interview
+          </button>
+          <button
+            class="px-3 rounded-lg text-[#64748B] font-medium text-xs bg-white py-2.5 border-[#F1F2F4] border"
+          >
+            Rejected
+          </button>
+        </div>
+        <!-- Job cards -->
+        <div>
+            <!-- card -01 -->
+            <div class="broder border-[#F1F2F4] bg-[#FFFFFF] p-6 rounded-lg ">
+                <!-- job title  -->
+                <div class="flex  justify-between">
+                    <div>
+                        <h1 class="text-[#002C5C] text-lg font-semibold ">Mobile First Corp</h1>
+                        <p class="text-[#64748B] text-base font-normal">React Native Developer</p>
+                    </div>
+                    <div class="flex items-center">
+                        <button class="py-2.5 px-3  border border-[#F1F2F4] rounded-full bg-[#FFFFFF]"><i class="fa-regular fa-trash-can text-[#64748B]"></i></button>
+                    </div>
+                </div>
+                <!-- job description -->
+                <div class="text-[#64748B] font-normal text-sm my-5">
+                    <p>Remote • Full-time • $130,000 - $175,000</p>
+                </div>
+                <!-- ##### -->
+                 <div>
+                    <button class="text-[#002C5C]  px-3 py-2 bg-[#E6F2FF] rounded mb-2">Not Applied</button>
+                    <p class="text-[#323B49] font-normal text-sm mb-5 ">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                 </div>
+
+                 <!-- buttons -->
+                  <div class="flex gap-2">
+                    <button class="border-[#10B981] border py-2 px-3 text-[#10B981] font-semibold text-sm uppercase leading-5 rounded-lg ">interview</button>
+                    <button class="border-[#EF4444] border py-2 px-3 text-[#EF4444] font-semibold text-sm uppercase leading-5 rounded-lg ">Rejected</button>
+                  </div>
+            </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>
