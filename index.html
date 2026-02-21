@@ -42,21 +42,21 @@
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
         <!-- Total Interview card -->
-        <div class="border-[#F1F2F4] border rounded-xl bg-[#FFFFFF] p-5">
+        <div class="border-[#F1F2F4] border rounded-xl bg-[#FFFFFF] p-5 transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 hover:bg-blue-200">
           <h1 class="mb-2 text-[#323B49] text-xl font-medium">Total</h1>
-          <p class="text-[#002C5C] font-bold text-2xl">0</p>
+          <p id="total-job-count" class="text-[#002C5C] font-bold text-2xl">0</p>
         </div>
 
         <!-- Interview card section -->
-        <div class="border-[#F1F2F4] border rounded-xl bg-[#FFFFFF] p-5">
+        <div class="border-[#F1F2F4] border rounded-xl bg-[#FFFFFF] p-5 transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 hover:bg-green-200">
           <h1 class="mb-2 text-[#323B49] text-xl font-medium">Interview</h1>
-          <p class="text-[#10B981] font-bold text-2xl">0</p>
+          <p id="interview-count" class="text-[#10B981] font-bold text-2xl">0</p>
         </div>
 
         <!-- Rejected card section -->
-        <div class="border-[#F1F2F4] border rounded-xl bg-[#FFFFFF] p-5">
+        <div class="border-[#F1F2F4] border rounded-xl bg-[#FFFFFF] p-5 transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 hover:bg-red-200">
           <h1 class="mb-2 text-[#323B49] text-xl font-medium">Rejected</h1>
-          <p class="text-[#EF4444] font-bold text-2xl">0</p>
+          <p id="rejected-count" class="text-[#EF4444] font-bold text-2xl">0</p>
         </div>
       </div>
     </header>
@@ -68,29 +68,31 @@
         <div class="flex justify-between my-8">
           <h1 class="text-[#002C5C] text-xl font-bold">Available Jobs</h1>
           <p class="text-[#323B49] font-medium text-base">
-            <span>0</span> jobs
+            <span id="available-jobs-count">0</span> jobs
           </p>
         </div>
         <!-- Buttons -->
         <div class="flex gap-2 pb-4">
-          <button
+          <button onclick="toggleBtn('all-btn')" id="all-btn"
             class="px-3 rounded-lg text-white font-medium text-xs bg-[#3B82F6] py-2.5 w-20 border-[#F1F2F4] border"
           >
             All
           </button>
-          <button
+          <button onclick="toggleBtn('interview-btn')" id="interview-btn"
             class="px-3 rounded-lg text-[#64748B] font-medium text-xs bg-white py-2.5 border-[#F1F2F4] border"
           >
             Interview
           </button>
-          <button
+          <button onclick="toggleBtn('rejected-btn')" id="rejected-btn"
             class="px-3 rounded-lg text-[#64748B] font-medium text-xs bg-white py-2.5 border-[#F1F2F4] border"
           >
             Rejected
           </button>
         </div>
+
+
         <!-- Job cards -->
-        <div class="flex flex-col gap-4">
+        <div id="all-cards" class="flex flex-col gap-4">
           <!-- card -01 Mobile First Corp-->
           <div class="broder border-[#F1F2F4] bg-[#FFFFFF] p-6 rounded-lg">
             <!-- job title  -->
@@ -131,12 +133,12 @@
             <!-- buttons -->
             <div class="flex gap-2">
               <button
-                class="border-[#10B981] border py-2 px-3 text-[#10B981] font-semibold text-sm uppercase leading-5 rounded-lg"
+                class="border-[#10B981] hover:bg-[#10B981] hover:text-white border py-2 px-3 text-[#10B981] font-semibold text-sm uppercase leading-5 rounded-lg "
               >
                 interview
               </button>
               <button
-                class="border-[#EF4444] border py-2 px-3 text-[#EF4444] font-semibold text-sm uppercase leading-5 rounded-lg"
+                class="border-[#EF4444] hover:bg-[#EF4444] hover:text-white border py-2 px-3 text-[#EF4444] font-semibold text-sm uppercase leading-5 rounded-lg"
               >
                 Rejected
               </button>
@@ -183,12 +185,12 @@
             <!-- buttons -->
             <div class="flex gap-2">
               <button
-                class="border-[#10B981] border py-2 px-3 text-[#10B981] font-semibold text-sm uppercase leading-5 rounded-lg"
+                class= " hover:bg-[#10B981] hover:text-white border-[#10B981] border py-2 px-3 text-[#10B981] font-semibold text-sm uppercase leading-5 rounded-lg"
               >
                 interview
               </button>
               <button
-                class="border-[#EF4444] border py-2 px-3 text-[#EF4444] font-semibold text-sm uppercase leading-5 rounded-lg"
+                class=" hover:bg-[#EF4444] hover:text-white border-[#EF4444] border py-2 px-3 text-[#EF4444] font-semibold text-sm uppercase leading-5 rounded-lg"
               >
                 Rejected
               </button>
@@ -235,12 +237,12 @@
             <!-- buttons -->
             <div class="flex gap-2">
               <button
-                class="border-[#10B981] border py-2 px-3 text-[#10B981] font-semibold text-sm uppercase leading-5 rounded-lg"
+                class="  hover:bg-[#10B981] hover:text-white border-[#10B981] border py-2 px-3 text-[#10B981] font-semibold text-sm uppercase leading-5 rounded-lg"
               >
                 interview
               </button>
               <button
-                class="border-[#EF4444] border py-2 px-3 text-[#EF4444] font-semibold text-sm uppercase leading-5 rounded-lg"
+                class="border-[#EF4444] border hover:bg-[#EF4444] hover:text-white py-2 px-3 text-[#EF4444] font-semibold text-sm uppercase leading-5 rounded-lg"
               >
                 Rejected
               </button>
@@ -287,12 +289,12 @@
             <!-- buttons -->
             <div class="flex gap-2">
               <button
-                class="border-[#10B981] border py-2 px-3 text-[#10B981] font-semibold text-sm uppercase leading-5 rounded-lg"
+                class=" hover:bg-[#10B981] hover:text-white border-[#10B981] border py-2 px-3 text-[#10B981] font-semibold text-sm uppercase leading-5 rounded-lg"
               >
                 interview
               </button>
               <button
-                class="border-[#EF4444] border py-2 px-3 text-[#EF4444] font-semibold text-sm uppercase leading-5 rounded-lg"
+                class="border-[#EF4444] hover:bg-[#EF4444] hover:text-white border py-2 px-3 text-[#EF4444] font-semibold text-sm uppercase leading-5 rounded-lg"
               >
                 Rejected
               </button>
@@ -340,12 +342,12 @@
             <!-- buttons -->
             <div class="flex gap-2">
               <button
-                class="border-[#10B981] border py-2 px-3 text-[#10B981] font-semibold text-sm uppercase leading-5 rounded-lg"
+                class= " hover:bg-[#10B981] hover:text-white border-[#10B981] border py-2 px-3 text-[#10B981] font-semibold text-sm uppercase leading-5 rounded-lg"
               >
                 interview
               </button>
               <button
-                class="border-[#EF4444] border py-2 px-3 text-[#EF4444] font-semibold text-sm uppercase leading-5 rounded-lg"
+                class="border-[#EF4444] hover:bg-[#EF4444] hover:text-white border py-2 px-3 text-[#EF4444] font-semibold text-sm uppercase leading-5 rounded-lg"
               >
                 Rejected
               </button>
@@ -393,12 +395,12 @@
             <!-- buttons -->
             <div class="flex gap-2">
               <button
-                class="border-[#10B981] border py-2 px-3 text-[#10B981] font-semibold text-sm uppercase leading-5 rounded-lg"
+                class=" hover:bg-[#10B981] hover:text-white border-[#10B981] border py-2 px-3 text-[#10B981] font-semibold text-sm uppercase leading-5 rounded-lg"
               >
                 interview
               </button>
               <button
-                class="border-[#EF4444] border py-2 px-3 text-[#EF4444] font-semibold text-sm uppercase leading-5 rounded-lg"
+                class="border-[#EF4444] hover:bg-[#EF4444] hover:text-white border py-2 px-3 text-[#EF4444] font-semibold text-sm uppercase leading-5 rounded-lg"
               >
                 Rejected
               </button>
@@ -444,12 +446,12 @@
             <!-- buttons -->
             <div class="flex gap-2">
               <button
-                class="border-[#10B981] border py-2 px-3 text-[#10B981] font-semibold text-sm uppercase leading-5 rounded-lg"
+                class= " hover:bg-[#10B981] hover:text-white border-[#10B981] border py-2 px-3 text-[#10B981] font-semibold text-sm uppercase leading-5 rounded-lg"
               >
                 interview
               </button>
               <button
-                class="border-[#EF4444] border py-2 px-3 text-[#EF4444] font-semibold text-sm uppercase leading-5 rounded-lg"
+                class="border-[#EF4444] hover:bg-[#EF4444] hover:text-white border py-2 px-3 text-[#EF4444] font-semibold text-sm uppercase leading-5 rounded-lg"
               >
                 Rejected
               </button>
@@ -497,12 +499,12 @@
             <!-- buttons -->
             <div class="flex gap-2">
               <button
-                class="border-[#10B981] border py-2 px-3 text-[#10B981] font-semibold text-sm uppercase leading-5 rounded-lg"
+                class=" hover:bg-[#10B981] hover:text-white  border-[#10B981] border py-2 px-3 text-[#10B981] font-semibold text-sm uppercase leading-5 rounded-lg"
               >
                 interview
               </button>
               <button
-                class="border-[#EF4444] border py-2 px-3 text-[#EF4444] font-semibold text-sm uppercase leading-5 rounded-lg"
+                class="border-[#EF4444] hover:bg-[#EF4444] hover:text-white border py-2 px-3 text-[#EF4444] font-semibold text-sm uppercase leading-5 rounded-lg"
               >
                 Rejected
               </button>
@@ -511,5 +513,7 @@
         </div>
       </section>
     </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
