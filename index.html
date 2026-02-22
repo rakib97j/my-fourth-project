@@ -34,24 +34,35 @@
     </style>
   </head>
   <body class="container mx-auto bg-[#F8FAFC]">
+
+
+
     <header class="mt-16 border-[#E6E7E9] border-b-2">
+
+
       <div>
         <h1 class="text-[#002C5C] font-bold text-3xl mb-5">
           Job Application Tracker
         </h1>
       </div>
+
+
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+
+
         <!-- Total Interview card -->
         <div class="border-[#F1F2F4] border rounded-xl bg-[#FFFFFF] p-5 transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 hover:bg-blue-200">
           <h1 class="mb-2 text-[#323B49] text-xl font-medium">Total</h1>
           <p id="total-job-count" class="text-[#002C5C] font-bold text-2xl">0</p>
         </div>
 
+
         <!-- Interview card section -->
         <div class="border-[#F1F2F4] border rounded-xl bg-[#FFFFFF] p-5 transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 hover:bg-green-200">
           <h1 class="mb-2 text-[#323B49] text-xl font-medium">Interview</h1>
           <p id="interview-count" class="text-[#10B981] font-bold text-2xl">0</p>
         </div>
+
 
         <!-- Rejected card section -->
         <div class="border-[#F1F2F4] border rounded-xl bg-[#FFFFFF] p-5 transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 hover:bg-red-200">
@@ -64,6 +75,7 @@
     <!-- jobs card section-->
     <main>
       <section>
+
         <!-- Available Jobs section -->
         <div class="flex justify-between my-8">
           <h1 class="text-[#002C5C] text-xl font-bold">Available Jobs</h1>
@@ -71,6 +83,10 @@
             <span id="available-jobs-count">0</span> jobs
           </p>
         </div>
+
+
+
+
         <!-- Buttons -->
         <div class="flex gap-2 pb-4">
           <button onclick="toggleBtn('all-btn')" id="all-btn"
@@ -91,6 +107,8 @@
         </div>
 
 
+
+        
         <!-- Job cards -->
         <div id="all-cards" class="flex flex-col gap-4">
           <!-- card -01 Mobile First Corp-->

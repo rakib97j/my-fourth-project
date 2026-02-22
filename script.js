@@ -41,9 +41,14 @@ function toggleBtn(id) {
   rejectedBtn.classList.add("bg-white", "text-[#64748B]");
 
   // console.log(id);
-
+//  for  btn select 
   const selected = document.getElementById(id);
-  //   console.log(selected);
+
+//   bg added for current btn
   selected.classList.remove("bg-white", "text-[#64748B]");
   selected.classList.add("bg-[#3B82F6]", "text-white");
 }
+
+
+
+//   
