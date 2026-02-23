@@ -2,7 +2,6 @@ let interviewList = [];
 let rejectedList = [];
 let currentStatus = "all-btn";
 
-// Job Application Tracker card
 let totalJobCount = document.getElementById("total-job-count");
 let interviewCount = document.getElementById("interview-count");
 let rejectedCount = document.getElementById("rejected-count");
@@ -132,6 +131,8 @@ mainContainer.addEventListener("click", function (event) {
 });
 
 // Render functions
+
+
 function renderInterview() {
   if (interviewList.length === 0) {
     filteredSection.innerHTML = `<section class="container mx-auto mt-4">
@@ -176,6 +177,7 @@ function renderInterview() {
     filteredSection.appendChild(div);
   });
 }
+
 
 function renderRejected() {
   if (rejectedList.length === 0) {
